@@ -1,0 +1,11 @@
+module ex3_top (SW,HEX0,HEX1,HEX2);
+	input [9:0] SW;
+	output [6:0] HEX0;
+	output [6:0] HEX1;
+	output [6:0] HEX2;
+	
+	hex_to_7seg (SW[3:0],HEX0);
+	hex_to_7seg (SW[7:4],HEX1);
+	hex_to_7seg (SW[9:8],HEX2);
+	
+endmodule
