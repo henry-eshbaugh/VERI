@@ -1,0 +1,8 @@
+module sinwave_gen(SW, clk, DAC_CS, DAC_SDI, DAC_LD, DAC_SCK);
+		input [9:0] SW;
+		input clk;
+		output DAC_CS, DAC_SDI, DAC_LD, DAC_SCK;
+		wire load_10k;
+		clock_div_5k cd5k (clk, load_10k);
+		spi2dac s2d (clk, SW[9:0], load_10k, DAC_SDI, DAC_CS, DAC_SCK, DAC_LD);
+endmodule

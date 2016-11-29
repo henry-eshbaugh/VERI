@@ -1,0 +1,15 @@
+module clock_div(CLOCK_50, clk);
+	input  CLOCK_50;
+	output clk;
+	
+	reg [15:0] count;
+	reg clk;
+	
+	always @ (posedge CLOCK_50) begin
+			count = count + 1;
+			if (count > 25000) begin
+				clk <= ~clk;
+				count = 0;
+			end
+	end
+endmodule
