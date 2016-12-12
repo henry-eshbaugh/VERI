@@ -1,0 +1,8 @@
+	component const_mult is
+		port (
+			result  : out std_logic_vector(23 downto 0);                    -- result
+			dataa_0 : in  std_logic_vector(9 downto 0)  := (others => 'X'); -- dataa_0
+			datab_0 : in  std_logic_vector(13 downto 0) := (others => 'X')  -- datab_0
+		);
+	end component const_mult;
+

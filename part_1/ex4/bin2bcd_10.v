@@ -1,0 +1,26 @@
+module bin2bcd_10 (B, BCD_0, BCD_1, BCD_2, BCD_3);
+
+input wire [9:0] B;
+output wire [3:0] BCD_0, BCD_1, BCD_2, BCD_3;
+
+wire [3:0] w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12;
+
+add3_ge5 a1 ({1'b0, B[9:7]}, w1);
+add3_ge5 a2 ({w1[2:0], B[6]}, w2);
+add3_ge5 a3 ({w2[2:0], B[5]}, w3);
+add3_ge5 a4 ({1'b0, w1[3], w2[3], w3[3]}, w4);
+add3_ge5 a5 ({w3[2:0], B[4]}, w5);
+add3_ge5 a6 ({w4[2:0], w5[3]}, w6);
+add3_ge5 a7 ({w5[2:0], B[3]}, w7);
+add3_ge5 a8 ({w6[2:0], w7[3]}, w8);
+add3_ge5 a9 ({w7[2:0], B[2]}, w9);
+add3_ge5 a10 ({1'b0, w4[3], w6[3], w8[3]}, w10);
+add3_ge5 a11 ({w8[2:0], w9[3]}, w11);
+add3_ge5 a12 ({w9[2:0], B[1]}, w12);
+
+assign BCD_0 = {w12[2:0], B[0]};
+assign BCD_1 = {w11[2:0], w12[3]};
+assign BCD_2 = {w10[2:0], w11[3]};
+assign BCD_3 = {3'b000, w10[3]};
+
+endmodule

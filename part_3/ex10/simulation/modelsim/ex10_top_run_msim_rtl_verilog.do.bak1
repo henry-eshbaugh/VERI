@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+H:/VERI-git/VERI/part_3/ex11 {H:/VERI-git/VERI/part_3/ex11/spi2dac.v}
+vlog -vlog01compat -work work +incdir+H:/VERI-git/VERI/part_3/ex11 {H:/VERI-git/VERI/part_3/ex11/clkdiv5k.v}
+vlog -vlog01compat -work work +incdir+H:/VERI-git/VERI/part_3/ex10 {H:/VERI-git/VERI/part_3/ex10/ex10_top.v}
+

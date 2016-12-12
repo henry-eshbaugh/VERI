@@ -24,12 +24,10 @@ module processor (sysclk, data_in, data_out, data_valid, var_in);
 	
 	pulse_gen pg (pulse, data_valid, sysclk);
 	
-	RAM ram_echo (.clock(sysclk), .data(y[9:1]), .rdaddress(rdaddr), .rden(pulse), .wraddress(wdaddr), .wren(pulse), .q(q));
-	
 	input wire [9:0] var_in;
 	wire [12:0] switches;
 	
-	assign switches = {var_in[8:0],1'b0,1'b0,1'b0,1'b0};
+	assign switches = {var_in[9:0],3'b001};
 	
 	wire [12:0] wdaddr;
 	
@@ -39,7 +37,9 @@ module processor (sysclk, data_in, data_out, data_valid, var_in);
 	
 	counter_13 counter (data_valid, 1'b1, rdaddr, 1'b0); 
 	
-	assign y = x - {q[8],q[8:1]};
+	RAM ram_echo (.clock(sysclk), .data(y[9:1]), .rdaddress(rdaddr), .rden(pulse), .wraddress(wdaddr), .wren(pulse), .q(q));
+	
+	assign y = x - {q[8],q[8:0]};
 	
 
 	//........................//

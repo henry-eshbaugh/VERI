@@ -5,5 +5,5 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+H:/VERI/part_2/ex5 {H:/VERI/part_2/ex5/counter_8.v}
+vlog -vlog01compat -work work +incdir+H:/VERI-git/VERI/part_2/ex5 {H:/VERI-git/VERI/part_2/ex5/counter_8.v}
 

@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\VERI-git\VERI\part_2\ex7\simulation\modelsim
+vlfsr7
+!i10b 1
+!s100 VG_aZeh2l<2IWCii^QDSW2
+I75OJA5T[_aNRH716ilg<;0
+VYJ2oNW8miV:fV6Yb7_2VG1
+Z1 dH:\VERI-git\VERI\part_2\ex7\simulation\modelsim
+w1481559721
+8H:/VERI-git/VERI/part_2/ex7/lfsr7.v
+FH:/VERI-git/VERI/part_2/ex7/lfsr7.v
+L0 3
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1481559994.364000
+!s107 H:/VERI-git/VERI/part_2/ex7/lfsr7.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI-git/VERI/part_2/ex7|H:/VERI-git/VERI/part_2/ex7/lfsr7.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+H:/VERI-git/VERI/part_2/ex7 -O0

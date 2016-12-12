@@ -1,0 +1,19 @@
+module counter_10 ( clock, enable,count, reset);
+	parameter BIT_SZ = 10;
+	input clock;
+	input enable;
+	input reset;
+	output [BIT_SZ-1:0] count;
+	
+	reg [BIT_SZ-1:0] count;
+	
+	initial count = 0;
+	
+	always @ (posedge clock) begin
+		if (enable == 1'b1)
+			count <= count + 1'b1;
+		if (reset == 1'b1)
+			count <= 10'b0000000000;
+	end
+	
+endmodule

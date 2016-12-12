@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pinplan
+ variation_name="const_mult"
+ megafunction_name="ALTERA_MULT_ADD"
+ intended_family="Cyclone V"
+ specifies="all_ports">
+ <global>
+  <pin name="result[23..0]" direction="output" scope="external" />
+  <pin name="dataa_0[9..0]" direction="input" scope="external" />
+  <pin name="datab_0[13..0]" direction="input" scope="external" />
+ </global>
+</pinplan>

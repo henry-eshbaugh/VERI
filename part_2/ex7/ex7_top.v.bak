@@ -1,0 +1,18 @@
+// linear feedback shift register
+
+module lfsr7 (data_out, clk);
+
+	output[6:0] data_out;
+	reg data_out;
+
+	input clk;
+	wire clk;
+
+	reg [6:0] temp = 7'b1;
+
+	always @ (posedge clk)
+		temp <= {temp[5:0],temp[6]^temp[0]};
+
+	assign data_out = temp;
+
+endmodule

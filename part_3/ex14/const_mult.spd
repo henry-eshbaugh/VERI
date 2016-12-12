@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="const_mult_sim/const_mult.v" type="VERILOG" />
+ <topLevel name="const_mult" />
+ <deviceFamily name="cyclonev" />
+</simPackage>
